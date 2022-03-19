@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            chatapp
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"  type="text/css" href="style.css">
+    </head>
+    <body id="body">
+        <center>
+        <h2 id="h1">Lets Chat</h1>
+        <div id="div>">
+         <span>
+             <image id="image"></image>
+         </span>
+         <span>
+             <div>
+                 <h5 id="h2">Enter your page id</h5>
+                 <input id="input_id" placeholder="enter room id"></input>
+                 <h5 id="h3">Enter password</h5>
+                 <input placeholder="enter passcode" id="room_password"></input>
+                 <button onclick="login()">login</button>
+             </div>
+         </span>
+        </div>
+        </center>
+        <script>
+            var roomid=document.getElementById("input_id").value;
+            var roompassword=document.getElementById("room_password").value;
+            function login(){
+            localStorage.setItem("pid",roomid,roompassword);
+            window.location="logged.html";}        </script>
+    </body> 
+</html>
